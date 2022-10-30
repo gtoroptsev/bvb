@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Номер</th>
+    <th>Имя</th>
+    <th>Год рождения</th>
+    <th>Вес</th>
+    <th>Рост</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of items; let i = index; trackBy: trackByFn">
+    <td data-label="Номер">{{ i + (viewMode === 'dynamic' ? 0 : (page - 1) * 10) + 1 }}</td>
+    <td data-label="Имя">{{ item.name }}</td>
+    <td data-label="Год рождения">{{ item.birth_year }}</td>
+    <td data-label="Вес">{{ item.mass }}</td>
+    <td data-label="Рост">{{ item.height }}</td>
+  </tr>
+  <tr *ngIf="items && !items.length">
+    <td colspan="5">Не найдено ни одной записи</td>
+  </tr>
+  </tbody>
+</table>

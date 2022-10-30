@@ -1,0 +1,37 @@
+<div class="container">
+  <app-search
+    (changed)="onSearchChanged($event)">
+  </app-search>
+  <div class="container__status">
+    <app-status
+      [count]="response?.count"
+      [loading]="loading">
+    </app-status>
+    <app-view-mode-switcher
+      *ngIf="response"
+      [viewMode]="viewMode"
+      (changed)="onViewModeChanged($event)">
+    </app-view-mode-switcher>
+  </div>
+  <div
+    class="container__scroll"
+    scrollTracker
+    [offset]="scrollOffset"
+    (scrollEnd)="onScrollEnd()">
+    <app-people-table
+      *ngIf="response"
+      [page]="page"
+      [viewMode]="viewMode"
+      [items]="response.results">
+    </app-people-table>
+  </div>
+  <app-paginator
+    *ngIf="response"
+    [hidden]="viewMode === 'dynamic'"
+    [page]="page"
+    [previous]="response.previous"
+    [next]="response.next"
+    (navigateToNextPage)="navigateToNextPage()"
+    (navigateToPreviousPage)="navigateToPreviousPage()">
+  </app-paginator>
+</div>

@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<app-sw></app-sw>'
 })
 export class AppComponent {
-  title = 'bvb';
 }

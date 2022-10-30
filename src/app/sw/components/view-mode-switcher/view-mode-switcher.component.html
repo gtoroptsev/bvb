@@ -1,0 +1,14 @@
+<div class="view-mode-switcher">
+  <input
+    type="radio" id="dynamic" class="view-mode-switcher__dynamic"
+    name="mode" value="dynamic" [checked]="viewMode === 'dynamic'"
+    (change)="changeMode('dynamic')"
+  >
+  <label for="dynamic">Динамическая подгрузка</label>
+
+  <input
+    type="radio" id="paginate" class="view-mode-switcher__paginate"
+    name="mode" value="paginate" [checked]="viewMode === 'paginate'"
+    (change)="changeMode('paginate')">
+  <label for="paginate">Постраничное переключение</label>
+</div>

@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+:root {
+  --primary: #AC9EDF;
+  --border-color: #A7B3DB;
+  --text-color: #010101;
+  --text-color-alt: #F7F7F7;
+  --table-row-bg-color-odd: #FEFEFE;
+  --table-row-bg-color-even: #F7F5FE;
+}
+
+html, body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-color);
+  min-width: 375px;
+  overflow-x: auto;
+}

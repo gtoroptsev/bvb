@@ -1,0 +1,8 @@
+<div class="status">
+  <span *ngIf="count !== null" class="status__count count">
+    Найдено: <span class="count__value">{{ count }}</span>
+  </span>
+  <small *ngIf="loading" class="status__loading">
+    Загрузка...
+  </small>
+</div>

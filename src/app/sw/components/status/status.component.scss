@@ -1,0 +1,15 @@
+.status {
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+
+  &__count {
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  &__loading {
+    font-weight: 500;
+  }
+}

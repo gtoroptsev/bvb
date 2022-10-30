@@ -1,0 +1,23 @@
+<div class="paginator">
+  <div class="paginator__previous previous">
+    <button
+      type="button"
+      class="previous__button"
+      [disabled]="!previous"
+      (click)="navigateToPreviousPage.emit()">
+      Previous
+    </button>
+  </div>
+  <div class="paginator__page">
+    {{ page }}
+  </div>
+  <div class="paginator__next next">
+    <button
+      type="button"
+      class="next__button"
+      [disabled]="!next"
+      (click)="navigateToNextPage.emit()">
+      Next
+    </button>
+  </div>
+</div>
